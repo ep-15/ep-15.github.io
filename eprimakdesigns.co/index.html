@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E. Primak Designs | Home</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <style>
+        :root {
+            --blue-slate: #666A86;
+            --slate-grey: #788AA3;
+            --muted-teal: #92B6B1;
+            --celadon: #B2C9AB;
+            --pearl-beige: #E8DDB5;
+            --link-brown: #9C7A54;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--pearl-beige);
+            color: var(--blue-slate);
+            line-height: 1.65;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background-color: var(--blue-slate);
+            color: var(--pearl-beige);
+            padding: 2rem 8%;
+            border-bottom: 6px solid var(--muted-teal);
+        }
+
+        header img {
+            flex-shrink: 0;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        header div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+            font-size: 2.1rem;
+            letter-spacing: 0.03em;
+        }
+
+        header p {
+            margin: 0.4rem 0 0 0;
+            font-size: 1rem;
+            color: var(--pearl-beige);
+        }
+
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--blue-slate);
+            font-weight: 600;
+            border-left: 6px solid var(--muted-teal);
+            padding-left: 0.75rem;
+            margin-top: 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 8%;
+        }
+
+        section {
+            background-color: #ffffff;
+            border: 1px solid var(--celadon);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 10px rgba(102, 106, 134, 0.12);
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1.25rem 0 0 0;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            padding: 0.4rem 0 0.4rem 2rem;
+            border-bottom: 1px dotted var(--celadon);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: var(--muted-teal);
+            font-size: 1rem;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        address p {
+            margin: 0.4rem 0;
+        }
+
+        address strong {
+            display: inline-block;
+            width: 6.5rem;
+            font-weight: 500;
+            color: var(--slate-grey);
+        }
+
+        a {
+            color: var(--link-brown);
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: var(--link-brown);
+        }
+
+        footer {
+            background-color: var(--slate-grey);
+            color: var(--pearl-beige);
+            text-align: center;
+            padding: 1.5rem 8%;
+        }
+
+        footer p {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 6%;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            main {
+                padding: 2rem 5%;
+            }
+
+            address strong {
+                display: block;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.jpg" alt="E. Primak Designs logo" width="88" height="64">
+        <div>
+            <h1>E. Primak Designs</h1>
+            <p><em>Clean websites - built to last.</em></p>
+        </div>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+
+        <section>
+            <p>E. Primak Designs is a small firm focused on clean, custom, and thoughtful design from the ground up.</p>
+            <p>Whether you're launching a new business or refreshing an old site, we deal with everything from design to final code, so you get a site that's easy to maintain and easy to be proud of.</p>
+        </section>
+
+        <section>
+            <h2>Why Work With Us</h2>
+            <ul>
+                <li>Custom coded sites, unqiue design</li>
+                <li>Clean HTML that is built to last</li>
+                <li>Color palettes and layouts chosen with design principles in mind</li>
+                <li>Fast turnaround times on development</li>
+                <li>Mobile friendly, responsive pages by default</li>
+                <li>Straightforward pricing, no hidden fees</li>
+                <li>Direct communication with the firm during development</li>
+                <li>Ongoing support after finishing</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <address>
+                <p><strong>Phone:</strong> (704) 123-4567</p>
+                <p><strong>Email:</strong> hello@eprimakdesigns.co</p>
+                <p><strong>Address:</strong> 1 Charlotte St, Charlotte, NC 28222</p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>Page created by E. Primak Designs | Certified Front-End Web Developer</p>
+        <p>&copy; 2026 E. Primak Designs</p>
+    </footer>
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>
