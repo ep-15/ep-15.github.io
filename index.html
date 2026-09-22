@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Primak | Personal Homepage</title>
+    <link rel="icon" type="image/jpeg" href="images/favico.jpg">
+
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -18,13 +20,26 @@
         }
 
         h1 {
+            font-family: Georgia, 'Times New Roman', serif;
             color: #1a365d;
             border-bottom: 3px solid #3182ce;
             padding-bottom: 0.5rem;
         }
 
+        h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+        }
         p {
             font-size: 1.1rem;
+        }
+
+        main img {
+            display: block;
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            border-radius: 6px;
+            margin: 1rem 0;
         }
 
         .course-link {
@@ -32,6 +47,7 @@
             margin-top: 1.5rem;
             padding: 0.75rem 1.25rem;
             background-color: #1a365d;
+            /* White gives the text in the button the best contrast in the blue button. */
             color: #ffffff;
             text-decoration: none;
             border-radius: 4px;
@@ -55,7 +71,18 @@
         footer a {
             color: #2b6cb0;
         }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
     </style>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -64,17 +91,18 @@
     </header>
 
     <main>
+        <h2>Personal Homepage</h2>
         <p>Welcome to my homepage. I am a student interested in all things technology. In my freetime I like to spend time with friends and do outdoor activities. I hope you enjoy my site!  </p>
-        
         <a class="course-link" href="itis3135/">Visit my ITIS 3135 Site</a>
+
+        <img src="images/beach.jpg" alt="Photo of a sunset I took while with my family.">
     </main>
 
     <footer>
         <p>2026 - Ethan Primak</p>
+        <p><em>"Progress over perfection"</em></p>
     </footer>
 
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
-
 </body>
 </html>
