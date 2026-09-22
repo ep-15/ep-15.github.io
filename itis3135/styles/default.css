@@ -60,6 +60,27 @@ nav a {
     font-weight: bold;
 }
 
+nav a {
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.secondary-nav {
+    margin-top: 8px;
+    font-size: 0.85em;
+    opacity: 0.75;
+}
+
+.secondary-nav a {
+    font-weight: normal;
+    color: #555555;
+}
+
+.secondary-nav a:hover,
+.secondary-nav a:focus {
+    color: #1a365d;
+}
+
 figure {
     text-align: center;
     margin: 20px 0;
