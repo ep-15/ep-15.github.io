@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E. Primak Designs | Home</title>
-    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="icon" type="image/png" href="images/logo.jpg">
     <style>
         :root {
             --blue-slate: #666A86;
@@ -20,7 +20,8 @@
         }
 
         body {
-            margin: 0;
+            margin: 0 auto;
+            max-width: 1200px;
             font-family: Arial, Helvetica, sans-serif;
             background-color: var(--pearl-beige);
             color: var(--blue-slate);
@@ -52,7 +53,7 @@
             margin: 0;
             font-family: Georgia, 'Times New Roman', serif;
             font-weight: 600;
-            font-size: 2.1rem;
+            font-size: clamp(1.6rem, 5vw, 2.1rem);
             letter-spacing: 0.03em;
         }
 
@@ -78,6 +79,7 @@
         }
 
         section {
+            /* white used to give content cards a clean surface that stands out from the page background */
             background-color: #ffffff;
             border: 1px solid var(--celadon);
             border-radius: 8px;
@@ -158,9 +160,7 @@
                 padding: 1.5rem 6%;
             }
 
-            h1 {
-                font-size: 1.6rem;
-            }
+            
 
             main {
                 padding: 2rem 5%;
@@ -172,11 +172,12 @@
             }
         }
     </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <header>
-        <img src="logo.jpg" alt="E. Primak Designs logo" width="88" height="64">
+        <img src="images/site.jpg" alt="E. Primak Designs logo" width="88" height="64">
         <div>
             <h1>E. Primak Designs</h1>
             <p><em>Clean websites - built to last.</em></p>
@@ -187,6 +188,7 @@
         <h2>Home</h2>
 
         <section>
+            <h2>About Us</h2>
             <p>E. Primak Designs is a small firm focused on clean, custom, and thoughtful design from the ground up.</p>
             <p>Whether you're launching a new business or refreshing an old site, we deal with everything from design to final code, so you get a site that's easy to maintain and easy to be proud of.</p>
         </section>
@@ -219,7 +221,6 @@
         <p>Page created by E. Primak Designs | Certified Front-End Web Developer</p>
         <p>&copy; 2026 E. Primak Designs</p>
     </footer>
-<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
 </body>
 </html>
