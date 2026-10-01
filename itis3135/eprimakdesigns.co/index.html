@@ -29,9 +29,11 @@
         }
 
         header {
-            display: flex;
+            display: grid;
+            grid-template-columns: auto 1fr;
             align-items: center;
-            gap: 1.5rem;
+            align-content: center;
+            column-gap: 1.5rem;
             background-color: var(--blue-slate);
             color: var(--pearl-beige);
             padding: 2rem 8%;
@@ -39,17 +41,13 @@
         }
 
         header img {
-            flex-shrink: 0;
+            grid-row: 1 / span 2;
             border-radius: 6px;
             object-fit: cover;
         }
 
-        header div {
-            display: flex;
-            flex-direction: column;
-        }
-
         h1 {
+            align-self: end;
             margin: 0;
             font-family: Georgia, 'Times New Roman', serif;
             font-weight: 600;
@@ -58,12 +56,14 @@
         }
 
         header p {
+            align-self: start;
             margin: 0.4rem 0 0 0;
             font-size: 1rem;
             color: var(--pearl-beige);
         }
 
-        h2 {
+        h2,
+        h3 {
             font-family: Georgia, 'Times New Roman', serif;
             color: var(--blue-slate);
             font-weight: 600;
@@ -155,12 +155,15 @@
 
         @media (max-width: 600px) {
             header {
-                flex-direction: column;
-                align-items: flex-start;
+                grid-template-columns: 1fr;
+                justify-items: start;
                 padding: 1.5rem 6%;
             }
 
-            
+            header img {
+                grid-row: auto;
+                margin-bottom: 1.5rem;
+            }
 
             main {
                 padding: 2rem 5%;
@@ -178,23 +181,21 @@
 
     <header>
         <img src="images/site.jpg" alt="E. Primak Designs logo" width="88" height="64">
-        <div>
-            <h1>E. Primak Designs</h1>
-            <p><em>Clean websites - built to last.</em></p>
-        </div>
+        <h1>E. Primak Designs</h1>
+        <p><em>Clean websites - built to last.</em></p>
     </header>
 
     <main>
         <h2>Home</h2>
 
         <section>
-            <h2>About Us</h2>
+            <h3>About Us</h3>
             <p>E. Primak Designs is a small firm focused on clean, custom, and thoughtful design from the ground up.</p>
             <p>Whether you're launching a new business or refreshing an old site, we deal with everything from design to final code, so you get a site that's easy to maintain and easy to be proud of.</p>
         </section>
 
         <section>
-            <h2>Why Work With Us</h2>
+            <h3>Why Work With Us</h3>
             <ul>
                 <li>Custom coded sites, unqiue design</li>
                 <li>Clean HTML that is built to last</li>
@@ -208,7 +209,7 @@
         </section>
 
         <section>
-            <h2>Contact</h2>
+            <h3>Contact</h3>
             <address>
                 <p><strong>Phone:</strong> (704) 123-4567</p>
                 <p><strong>Email:</strong> hello@eprimakdesigns.co</p>
