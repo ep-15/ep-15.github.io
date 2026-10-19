@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifting Weights | What Is Lifting?</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- I used AI for code and text (see the AI Prompts section) and for the illustrations. -->
+    <!-- No divs are used. Spans are used only for the divider symbols between nav links, because a divider is not a link and has no semantic tag of its own. Each span has the class "divider" so one CSS rule can color it and aria-hidden hides it from screen readers. Ids are used only on the section elements so the nav links and the JavaScript can show one section at a time. -->
+    <style>
+        :root {
+            --bg: #1d1f24;
+            --panel: #292c33;
+            --panel-edge: #3b4150;
+            --text: #f3ece2;
+            --muted: #cfc8be;
+            --accent: #ff7a30;
+            --gold: #ffc15e;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+            line-height: 1.65;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header, main, footer {
+            max-width: 920px;
+            margin: 0 auto 20px;
+            padding: 24px;
+            background-color: var(--panel);
+            border: 2px solid var(--panel-edge);
+            border-radius: 10px;
+        }
+
+        header { text-align: center; border-bottom: 6px solid var(--accent); }
+        footer { text-align: center; font-size: 0.9rem; color: var(--muted); }
+
+        h1 {
+            font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: normal;
+            margin-top: 0;
+            color: var(--gold);
+            font-size: clamp(2rem, 8vw, 2.8rem);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: Impact, "Arial Narrow", "Arial Black", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: normal;
+            margin-top: 0;
+            color: var(--accent);
+            font-size: clamp(1.5rem, 6vw, 2rem);
+            border-left: 8px solid var(--gold);
+            padding-left: 14px;
+        }
+
+        a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+        a:hover, a:focus { color: var(--accent); }
+
+        nav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 10px; }
+        nav a {
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+        nav a:hover, nav a:focus { background-color: var(--panel-edge); color: var(--gold); }
+        nav a[aria-current="page"] { background-color: var(--accent); color: var(--bg); }
+        .divider { color: var(--accent); font-weight: bold; }
+
+        section[hidden] { display: none; }
+
+        p { max-width: 70ch; }
+
+        figure {
+            margin: 24px 0;
+            padding: 16px;
+            background-color: var(--bg);
+            border: 2px solid var(--panel-edge);
+            border-radius: 10px;
+        }
+        figure img { display: block; width: 100%; max-width: 600px; height: auto; margin: 0 auto; border-radius: 10px; }
+        figcaption { margin-top: 12px; font-weight: bold; color: var(--gold); text-align: center; }
+        figcaption p { margin: 6px auto 0; font-weight: normal; font-size: 0.92rem; color: var(--muted); text-align: center; }
+
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; background-color: var(--bg); }
+        caption { text-align: left; font-weight: bold; color: var(--gold); padding: 8px 0; }
+        th, td { border: 1px solid var(--panel-edge); padding: 10px; text-align: left; }
+        th { background-color: var(--panel-edge); color: var(--gold); }
+
+        ul, ol { max-width: 70ch; padding-left: 1.4rem; }
+        li { margin-bottom: 6px; }
+
+        blockquote {
+            margin: 16px 0;
+            padding: 12px 18px;
+            border-left: 6px solid var(--accent);
+            background-color: var(--bg);
+            max-width: 70ch;
+        }
+
+        header p { margin: 0 auto 12px; }
+        footer p { margin: 8px auto; }
+        footer nav { margin-bottom: 8px; }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            header, main, footer { padding: 16px; }
+        }
+    </style>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Lifting Weights</h1>
+        <p><em>"Show up, lift, repeat."</em></p>
+        <nav aria-label="Hobby sections">
+            <a href="#what">What</a><span class="divider" aria-hidden="true">💪</span>
+            <a href="#who">Who</a><span class="divider" aria-hidden="true">💪</span>
+            <a href="#when">When</a><span class="divider" aria-hidden="true">💪</span>
+            <a href="#where">Where</a><span class="divider" aria-hidden="true">💪</span>
+            <a href="#how">How</a><span class="divider" aria-hidden="true">💪</span>
+            <a href="#why">Why</a><span class="divider" aria-hidden="true">💪</span>
+            <a href="#prompts">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="what">
+            <h2>What Is Lifting?</h2>
+            <p>Lifting weights, also known as resistance training, is moving a heavy load on purpose. Barbells, dumbbells, cables and machines. You pick an exercise, do a set number of reps, rest, and repeat. Over time you add a little more weight or a few more reps, and your muscles, bones and tendons adapt to handle it.</p>
+            <figure>
+                <img src="images/what.svg" width="600" height="400" alt="A cartoon barbell loaded with orange and gold plates resting on a gym floor">
+                <figcaption>
+                    A loaded barbell, the main tool of the sport
+                    <p><em>AI Prompt: "Draw a flat cartoon barbell with orange and gold plates on a dark gym floor."</em></p>
+                </figcaption>
+            </figure>
+            <p>The main idea is something called progressive overload. If you lift the same weight forever, your body has no reason to change. How ever small, steady increases give it one.</p>
+            <b>Different types of lifting styles:</b>
+            <ul>
+                <li>Strength training: lifting heavier weights for fewer reps.</li>
+                <li>Hypertrophy training: moderate weights for more reps to build muscle size.</li>
+                <li>Endurance training: lighter weights for many reps.</li>
+            </ul>
+        </section>
+
+        <section id="who" hidden>
+            <h2>About Me</h2>
+            <p>My name is Ethan, a student at UNC Charlotte. Lifting is the hobby that keeps the rest of my week in order. It gives me a time to put my phone down and focus on one thing.</p>
+            <figure>
+                <img src="images/who.svg" width="600" height="400" alt="A cartoon lifter in an orange shirt pressing a barbell overhead">
+                <figcaption>
+                    A person pressing a barbell overhead
+                    <p><em>AI Prompt: "Draw a simple flat cartoon lifter in an orange shirt pressing a barbell overhead."</em></p>
+                </figcaption>
+            </figure>
+            <p>I train on a push, pull, legs routine and everyday I learn something new about fitness. I wanted to make myself better everyday, and by going to the gym and lifting weights that helps me by building not only physical strength but mental strength aswell.</p>
+            <table>
+                <caption>Quick facts about my lifting</caption>
+                <tr><th scope="row">Style</th><td>Push / Pull / Legs</td></tr>
+                <tr><th scope="row">Favorite lift</th><td>Shoulder press machine</td></tr>
+                <tr><th scope="row">Experience level</th><td>Beginner to intermediate</td></tr>
+                <tr><th scope="row">Current goal</th><td>Add weight to my lifts every 2 weeks at least</td></tr>
+            </table>
+        </section>
+
+        <section id="when" hidden>
+            <h2>Best Times to Lift</h2>
+            <p>The best time to lift is very dependent on the person, and their daily responsibilities/schedule. Later morning times are usually quiet and fits my daily routine personally. Late afternoons are often when people feel strongest and energized, however gyms are usually busier.</p>
+            <figure>
+                <img src="images/when.svg" width="600" height="400" alt="A clock face between a sun on the left and a crescent moon on the right">
+                <figcaption>
+                    Morning, evening, or anything in between
+                    <p><em>AI Prompt: "Draw a flat cartoon clock between a sun and a moon in orange, gold and cream."</em></p>
+                </figcaption>
+            </figure>
+            <table>
+                <caption>My weekly training schedule</caption>
+                <thead>
+                    <tr><th scope="col">Day</th><th scope="col">Focus</th><th scope="col">Time</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday</td><td>Push (chest, shoulders, triceps)</td><td>Morning</td></tr>
+                    <tr><td>Tuesday</td><td>Pull (back, biceps)</td><td>Morning</td></tr>
+                    <tr><td>Wednesday</td><td>Legs</td><td>Morning</td></tr>
+                    <tr><td>Thursday</td><td>Rest (chest, shoulders, triceps)</td><td>Morning</td></tr>
+                    <tr><td>Friday</td><td>Push (back, biceps)</td><td>Morning</td></tr>
+                    <tr><td>Saturday</td><td>Pull and legs</td><td>Morning</td></tr>
+                    <tr><td>Sunday</td><td>Rest</td><td>-</td></tr>
+                </tbody>
+            </table>
+            <p>Schedule matters less than it seems. As long as you show up consistently a few times a week, you will see results with your fitness journey. Sometimes the key to success in fitness is staying disciplined by showing up even if you don't want to.</p>
+        </section>
+
+        <section id="where" hidden>
+            <h2>Where to Lift</h2>
+            <p>You can lift almost anywhere. The right spot depends on your budget, schedule and how much equipment you want.</p>
+            <figure>
+                <img src="images/where.svg" width="600" height="400" alt="A squat rack, a bench and a dumbbell rack on a dark gym floor">
+                <figcaption>
+                    The three stations I use most: rack, bench, dumbbells
+                    <p><em>AI Prompt: "Draw a flat cartoon gym floor with a squat rack, a bench and a dumbbell rack."</em></p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li><strong>Campus recreation center:</strong> Included with tuition at UNCC and has plenty of equipment for everything fitness related. However, it can be busy at times and you may have to wait on certain equipment.</li>
+                <li><strong>Commercial gym:</strong> A lot more options for equipment that might not be available at home or a smaller gym, and the hours are usually longer. There is a monthly fee for commerical gyms, how ever it usually is pretty cheap.</li>
+                <li><strong>Home gym:</strong> No commute and no waiting. Working out at home can save you a lot of time in your day which allows you to exercise but still do other tasks you may have. However, it takes space and an upfront cost.</li>
+            </ul>
+            <p>If you decide to go to a gym that isn't your home, familiarize yourself with the peak hours for the equipment you use so you can plan your workouts at the best times.</p>
+        </section>
+
+        <section id="how" hidden>
+            <h2>How to Start</h2>
+            <p>Starting is simpler than it looks. Pick a handful of basic lifts that each target a different muscle, learn them with light weight, then add weight slowly. Good form matters more than the number on the bar.</p>
+            <figure>
+                <img src="images/how.svg" width="600" height="400" alt="A cartoon lifter at the bottom of a squat with an arrow pointing down">
+                <figcaption>
+                    A squat: hips back, chest up, knees tracking over toes
+                    <p><em>AI Prompt: "Draw a flat cartoon lifter in the bottom of a barbell squat with a down arrow."</em></p>
+                </figcaption>
+            </figure>
+            <ol>
+                <li>Learn the five basic compound lifts: squat, bench press, deadlift, overhead press and row.</li>
+                <li>Warm up with a light set before the heavy ones.</li>
+                <li>Do 3 sets of 6 to 10 reps and stop each set with one or two reps left in the tank.</li>
+                <li>Add a small amount of weight when every set feels solid.</li>
+                <li>Rest, eat a good diet and sleep. Muscle is built between workouts.</li>
+            </ol>
+            <p>If you are unsure about a lift, there are plenty of resources online. I personally like to use TikTok to watch short-form straight to the point videos on how to do a certain exercise or correct my form if needed. </p>
+        </section>
+
+        <section id="why" hidden>
+            <h2>Why I Lift</h2>
+            <p>I lift weights because it helps me build discipline, get stronger, and see progress over time. Every workout is an opportunity to push myself and improve from where I was before.</p>
+            <figure>
+                <img src="images/why.svg" width="600" height="400" alt="An orange heart with a barbell running through it">
+                <figcaption>
+                    Strength for the body and the head
+                    <p><em>AI Prompt: "Draw a flat cartoon orange heart with a barbell through it."</em></p>
+                </figcaption>
+            </figure>
+            <ul>
+                <li>It reduces stress and clears my head.</li>
+                <li>It builds discipline that carries over to other things, such as schoolwork.</li>
+                <li>It keeps bones, joints and muscles healthy for the long run.</li>
+                <li>It is a good way to meet people with similar goals.</li>
+            </ul>
+            <p>A lot of days I do not feel like going. But I push my self go anyway, and I have never regretted a workout once it was done.</p>
+        </section>
+
+        <section id="prompts" hidden>
+            <h2>AI Prompts</h2>
+            <p>I used AI (Claude) to help write the code, the text and the illustrations for this page. These are the prompts I used.</p>
+            <ol>
+                <li>
+                    <p>Page and code prompt:</p>
+                    <blockquote>Build a standalone single page hobby site about lifting weights at the gym. It needs header, main and footer in one index.html with an embedded stylesheet, sections for Who, What, When, Where, How, Why and AI Prompts, a nav that shows one section at a time with JavaScript, and a unique divider symbol that also updates the page title. It should follow CRAP principles, use a color scheme different from my course site, and validate cleanly.</blockquote>
+                </li>
+                <li>
+                    <p>Image prompt (used for all six pictures, with the subject changed each time):</p>
+                    <blockquote>Draw a flat cartoon illustration, using only dark charcoal, orange, gold and cream, showing the subject.</blockquote>
+                </li>
+            </ol>
+            <table>
+                <caption>Where AI was used</caption>
+                <thead>
+                    <tr><th scope="col">Part</th><th scope="col">AI help</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>HTML, CSS and JavaScript</td><td>Generated, then reviewed and edited by me</td></tr>
+                    <tr><td>Images and favicon</td><td>Generated as SVG drawings</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://validator.w3.org/check?uri=referer">HTML</a> |
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS</a> |
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/eprimak/itis3135/hobby/">Accessibility</a>
+        </p>
+        <p>Page created by <a href="../eprimakdesigns.co/">E. Primak Designs</a></p>
+    </footer>
+
+    <script>
+        (function () {
+            var baseTitle = "Lifting Weights";
+            var divider = " | ";
+            var sections = document.querySelectorAll("main > section");
+            var links = document.querySelectorAll("header nav a");
+            var defaultId = "what";
+
+            function show(id) {
+                var found = false;
+                sections.forEach(function (s) {
+                    if (s.id === id) { found = true; }
+                });
+                if (!found) { id = defaultId; }
+
+                sections.forEach(function (s) {
+                    s.hidden = (s.id !== id);
+                    if (s.id === id) {
+                        document.title = baseTitle + divider + s.querySelector("h2").textContent;
+                    }
+                });
+                links.forEach(function (a) {
+                    if (a.getAttribute("href") === "#" + id) {
+                        a.setAttribute("aria-current", "page");
+                    } else {
+                        a.removeAttribute("aria-current");
+                    }
+                });
+                window.scrollTo(0, 0);
+            }
+
+            window.addEventListener("hashchange", function () {
+                show(location.hash.slice(1));
+            });
+            show(location.hash.slice(1));
+        })();
+    </script>
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+</body>
+</html>

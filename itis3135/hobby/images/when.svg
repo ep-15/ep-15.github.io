@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"><title>Clock between a sun and a moon</title><rect width="600" height="400" rx="24" fill="#2f333b"/>
+<circle cx="300" cy="200" r="125" fill="#f3ece2"/><circle cx="300" cy="200" r="125" fill="none" stroke="#ff7a30" stroke-width="12"/>
+<path d="M300 90 v22 M300 288 v22 M190 200 h22 M388 200 h22" stroke="#2f333b" stroke-width="8" stroke-linecap="round"/>
+<path d="M300 200 L300 128" stroke="#2f333b" stroke-width="10" stroke-linecap="round"/>
+<path d="M300 200 L350 228" stroke="#ff7a30" stroke-width="10" stroke-linecap="round"/>
+<circle cx="300" cy="200" r="10" fill="#2f333b"/>
+<circle cx="90" cy="90" r="34" fill="#ffc15e"/>
+<path d="M90 36 v-14 M90 144 v14 M36 90 h-14 M144 90 h14" stroke="#ffc15e" stroke-width="6" stroke-linecap="round"/>
+<path d="M520 60 a40 40 0 1 0 28 76 a32 32 0 1 1 -28 -76 z" fill="#c9c2b8"/>
+</svg>

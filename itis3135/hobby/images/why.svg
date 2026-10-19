@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"><title>Heart with a barbell through it</title><rect width="600" height="400" rx="24" fill="#2f333b"/>
+<path d="M300 335 C110 225 135 90 225 90 C268 90 293 118 300 135 C307 118 332 90 375 90 C465 90 490 225 300 335 Z" fill="#ff7a30"/>
+<path d="M300 300 C220 235 205 150 245 135 C265 130 285 150 300 175 Z" fill="#ffc15e" opacity="0.35"/>
+<rect x="70" y="190" width="460" height="12" rx="6" fill="#c9c2b8"/>
+<rect x="85" y="150" width="22" height="92" rx="7" fill="#f3ece2"/><rect x="112" y="165" width="16" height="62" rx="6" fill="#ffc15e"/>
+<rect x="493" y="150" width="22" height="92" rx="7" fill="#f3ece2"/><rect x="472" y="165" width="16" height="62" rx="6" fill="#ffc15e"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img"><title>Loaded barbell on a gym floor</title><rect width="600" height="400" rx="24" fill="#2f333b"/>
+<circle cx="300" cy="190" r="130" fill="#ff7a30" opacity="0.18"/>
+<rect x="0" y="300" width="600" height="100" fill="#23262c"/>
+<rect x="60" y="195" width="480" height="12" rx="6" fill="#c9c2b8"/>
+<rect x="110" y="120" width="26" height="162" rx="8" fill="#ff7a30"/>
+<rect x="140" y="140" width="20" height="122" rx="7" fill="#ffc15e"/>
+<rect x="164" y="160" width="14" height="82" rx="6" fill="#f3ece2"/>
+<rect x="464" y="120" width="26" height="162" rx="8" fill="#ff7a30"/>
+<rect x="440" y="140" width="20" height="122" rx="7" fill="#ffc15e"/>
+<rect x="422" y="160" width="14" height="82" rx="6" fill="#f3ece2"/>
+<ellipse cx="300" cy="312" rx="190" ry="14" fill="#14161a" opacity="0.6"/>
+</svg>
