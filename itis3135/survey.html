@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Primak's Elegant Panda | ITIS3135 | Survey Form</title>
+    <title>Ethan Primak's Elegant Panda | ITIS3135 | Favorite Hobby Survey</title>
     <link rel="stylesheet" href="styles/default.css">
     <link rel="icon" type="image/jpeg" href="images/favico.jpg">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -12,11 +12,86 @@
     <div data-include="components/header.html"></div>
 
     <main>
-        <h2>Survey Form</h2>
+        <!-- Ids: the ids title, description, survey-form, name, email, number, dropdown and submit are required by FCC. Every other id on a form control pairs with its labels for attribute so the label is linked to the input -->
+        <h2 id="title">Favorite Hobby Survey</h2>
+        <p id="description">Elegant Panda Gadgets builds tech for people with real hobbies. Tell us what you love to do, and we will point you to the gadgets that fit it.</p>
         <figure>
             <img src="images/panda.jpg" alt="A panda eating bamboo, which is also my mascot">
             <figcaption>Elegant Panda, my course mascot</figcaption>
         </figure>
+        <form id="survey-form" action="survey.html" method="get">
+            <fieldset>
+                <legend>About you</legend>
+                <p>
+                    <label for="name">Full name (required)</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
+                </p>
+                <p>
+                    <label for="preferred">Nickname</label><br>
+                    <input type="text" id="preferred" name="preferred" placeholder="What should we call you?" autocomplete="nickname">
+                </p>
+                <p>
+                    <label for="email">Email (required)</label><br>
+                    <input type="email" id="email" name="email" placeholder="hi@example.com" autocomplete="email" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your favorite hobby</legend>
+                <p>
+                    <label for="hobby">What is your favorite hobby? (required)</label><br>
+                    <input type="text" id="hobby" name="hobby" placeholder="For example: lifting" required>
+                </p>
+                <p>
+                    <label for="dropdown">Which category fits it best?</label><br>
+                    <select id="dropdown" name="category">
+                        <option value="">Select an option</option>
+                        <option value="sports">Sports and fitness</option>
+                        <option value="creative">Arts and crafts</option>
+                        <option value="games">Games and puzzles</option>
+                        <option value="outdoors">Outdoors and nature</option>
+                        <option value="tech">Technology and building</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="number">Hours per week you spend on it (required)</label><br>
+                    <input type="number" id="number" name="hours" min="0" max="168" placeholder="Hours" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>How do you usually do it?</legend>
+                <input type="radio" id="how-solo" name="how" value="solo" checked>
+                <label for="how-solo">On my own</label>
+                <input type="radio" id="how-friends" name="how" value="friends">
+                <label for="how-friends">With friends</label>
+                <input type="radio" id="how-club" name="how" value="club">
+                <label for="how-club">In a club or team</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Which gadgets would help your hobby? (select all that apply)</legend>
+                <input type="checkbox" id="gad-input" name="gad-input" value="input">
+                <label for="gad-input">Keyboards and mice</label>
+                <input type="checkbox" id="gad-audio" name="gad-audio" value="audio">
+                <label for="gad-audio">Audio</label>
+                <input type="checkbox" id="gad-display" name="gad-display" value="display">
+                <label for="gad-display">Displays</label>
+                <input type="checkbox" id="gad-camera" name="gad-camera" value="camera">
+                <label for="gad-camera">Cameras</label>
+                <input type="checkbox" id="gad-lighting" name="gad-lighting" value="lighting">
+                <label for="gad-lighting">Lighting</label>
+                <input type="checkbox" id="gad-accessories" name="gad-accessories" value="accessories">
+                <label for="gad-accessories">Cables and hubs</label>
+            </fieldset>
+
+            <p>
+                <label for="comments">Tell us more</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="40" placeholder="How did you get started, and what gadget do you wish existed?"></textarea>
+            </p>
+            <p><button type="submit" id="submit">Submit survey</button></p>
+        </form>
     </main>
 
     <div data-include="components/footer.html"></div>

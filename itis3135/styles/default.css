@@ -68,7 +68,6 @@ nav a {
 .secondary-nav {
     margin-top: 8px;
     font-size: 0.85em;
-    opacity: 0.75;
 }
 
 .secondary-nav a {
@@ -106,4 +105,32 @@ figcaption {
     header, main, footer {
         padding: 10px;
     }
+}
+p a, li a {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #b8c2cf;
+    padding: 6px;
+    text-align: left;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 16px;
+}
+
+pre {
+    overflow-x: auto;
 }

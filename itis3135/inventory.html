@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Primak's Elegant Panda | ITIS3135 | Inventory Page</title>
+    <title>Ethan Primak's Elegant Panda | ITIS3135 | Gadget Inventory</title>
     <link rel="stylesheet" href="styles/default.css">
     <link rel="icon" type="image/jpeg" href="images/favico.jpg">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
@@ -12,11 +12,95 @@
     <div data-include="components/header.html"></div>
 
     <main>
-        <h2>Inventory Page</h2>
+        <!-- Classes: the table-wrap class is the only class on this page, It lets the wide table scroll sideways on small screens instead of breaking the layout -->
+        <h2>Gadget Inventory</h2>
+        <p>Check out what is on the shelves at Elegant Panda Gadgets.</p>
         <figure>
-            <img src="images/panda.jpg" alt="A panda eating bamboo, which is also my mascot">
-            <figcaption>Elegant Panda, my course mascot</figcaption>
+            <img src="images/gadgets/bamboo-75.png" alt="A compact black mechanical keyboard with white and green keys">
+            <figcaption>The Bamboo 75, our best seller!</figcaption>
         </figure>
+        <section class="table-wrap" tabindex="0" aria-label="Inventory table, scrollable">
+            <table>
+                <caption>Gadget inventory</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Gadget</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Bamboo 75 Keyboard</th>
+                        <td>Keyboard</td>
+                        <td>$129</td>
+                        <td>24</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Whisper Mouse</th>
+                        <td>Mouse</td>
+                        <td>$49</td>
+                        <td>41</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Panda Pods</th>
+                        <td>Earbuds</td>
+                        <td>$79</td>
+                        <td>33</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Lookout 27 Monitor</th>
+                        <td>Display</td>
+                        <td>$289</td>
+                        <td>11</td>
+                        <td>Low stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Clear Cam 4K</th>
+                        <td>Webcam</td>
+                        <td>$99</td>
+                        <td>18</td>
+                        <td>Low stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Hub Hub Hooray</th>
+                        <td>USBC hub</td>
+                        <td>$59</td>
+                        <td>52</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Glow Desk Lamp</th>
+                        <td>Lighting</td>
+                        <td>$45</td>
+                        <td>7</td>
+                        <td>Low stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chirp Mini Speaker</th>
+                        <td>Smart speaker</td>
+                        <td>$69</td>
+                        <td>29</td>
+                        <td>In stock</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Total units on hand</th>
+                        <td colspan="2">215</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Value of stock</th>
+                        <td colspan="2">$18,057</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
     </main>
 
     <div data-include="components/footer.html"></div>
