@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Primak's Elegant Panda | ITIS3135 | Everything Pictures</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="icon" type="image/jpeg" href="images/favico.jpg">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div data-include="components/header.html"></div>
+
+    <main class="pictures">
+        <h2>Everything Pictures</h2>
+        <p>This page is for how images work on the web. Each of the two photos below goes through the same set of experiments which include converting formats, shrinking with CSS, shrinking properly in an editor, distorting proportions on purpose, and enlarging a small copy. Seeing the file sizes, dimensions and quality side by side shows why a 5000 pixel photo should never be sent to a browser untouched, and why proportions matter.</p>
+
+        <section>
+            <h3>Hong Kong's Neon Skyline: Demonstrating Image Manipulation With a Free Photo From The Web</h3>
+            <p>I picked this photo because the lit up windows, thin antenna lines and reflections on the water are fine details that show every flaw when an image is shrunk, stretched or enlarged badly. It was taken by Lance He, a photographer with many similar vibrant photos, and downloaded from Pexels. It shows the Hong Kong skyline at night over Victoria Harbour, in purple tones. The original is a JPG at 5568 × 3712 pixels and 3.71 MB.</p>
+
+            <article>
+                <h4>Original Image</h4>
+                <figure>
+                    <ul>
+                        <li><a href="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels.jpg" target="_blank" rel="noopener">Original (JPG)</a></li>
+                        <li><a href="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels.gif" target="_blank" rel="noopener">Original as a GIF</a></li>
+                        <li><a href="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a></li>
+                        <li><a href="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-bw.png" target="_blank" rel="noopener">Black and white</a></li>
+                    </ul>
+                    <figcaption>Click to open the image in its original JPG format, then compare the other three. The GIF is limited to 256 colors so the purple gradients in the sky band, the greyscale drops all color, and the black and white version keeps only pure black and pure white.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Downsizing with CSS</h4>
+                <figure>
+                    <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels.jpg" alt="Hong Kong skyline at night with purple sky and reflections in the harbor" style="width: 835px;">
+                    <figcaption>The full size original, shown at about 15% of its width using inline CSS. Only the width is set, so the browser works out the height and keeps the proportions. The browser still downloads all 3.71 MB.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with Editor</h4>
+                <figure>
+                    <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-600x400.jpg" alt="Hong Kong skyline at night, resized to 600 pixels wide" class="reduced">
+                    <figcaption>The same photo resized in an editor to 600 by 400 pixels (39.2 KB). It looks sharp and loads quickly. CSS still sets the size so the browser holds the space while the image loads.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <p>Every one of these is the same 600 by 400 file, shown at 40% scale (240 by 160) so all four fit in a row, then stretched by CSS.</p>
+                <div class="strip squish">
+                    <figure>
+                        <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-600x400.jpg" alt="Skyline squished vertically">
+                        <figcaption>Width kept at 240, height 33% smaller (107). Squashed flat.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-600x400.jpg" alt="Skyline squished vertically even more">
+                        <figcaption>Width kept at 240, height cut 33% again (72). The buildings look like they are sinking.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-600x400.jpg" alt="Skyline squeezed horizontally">
+                        <figcaption>Height kept at 160, width 33% smaller (161). Squeezed narrow.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-600x400.jpg" alt="Skyline squeezed horizontally even more">
+                        <figcaption>Height kept at 160, width cut 33% again (108). Stretched tall and thin.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <p>Both are displayed at the same CSS size, 400 by 267. Only the file behind them differs.</p>
+                <div class="strip enlarge">
+                    <figure>
+                        <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-600x400.jpg" alt="Skyline at 600 by 400, sharp">
+                        <figcaption>The 600 by 400 file displayed at 400 by 267. Sharp.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/hong-kong-skyscrapers-on-coast-at-night-14652746@lance-he_pexels-150x100.jpg" alt="Skyline reduced to 150 by 100 then enlarged, blurry">
+                        <figcaption>The 150 by 100 file (25% of the other) stretched by CSS to the same 400 by 267. The browser has to invent pixels, so it is blurry and blocky.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+       
+        <section class="portrait">
+            <h3>Circle Next to Head: Demonstrating Proportions with My Own Photo</h3>
+            <p>I picked a round black plate because a circle has exactly one correct proportion, while a human head does not. If the plate looks like an oval, I know right away that the image has been distorted. I took this photo myself in my kitchen, holding the plate next to my face. It is a portrait (tall) JPG at 2316 × 3088 pixels and 944 KB, so it shows what happens to a phone photo that gets squeezed into the wrong shape.</p>
+
+            <article>
+                <h4>Original Image</h4>
+                <figure>
+                    <ul>
+                        <li><a href="images/plate-next-to-head@eprimak.jpg" target="_blank" rel="noopener">Original (JPG)</a></li>
+                        <li><a href="images/plate-next-to-head@eprimak.gif" target="_blank" rel="noopener">Original as a GIF</a></li>
+                        <li><a href="images/plate-next-to-head@eprimak-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a></li>
+                        <li><a href="images/plate-next-to-head@eprimak-bw.png" target="_blank" rel="noopener">Black and white</a></li>
+                    </ul>
+                    <figcaption>Click to open the image in its original JPG format, then compare the other three. The GIF is limited to 256 colors, which shows in my skin tones, the greyscale drops all color, and the black and white version keeps only pure black and pure white.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Downsizing with CSS</h4>
+                <figure>
+                    <img src="images/plate-next-to-head@eprimak.jpg" alt="Me holding a black round plate next to my head in a kitchen" style="width: 347px;">
+                    <figcaption>The full size original, shown at about 15% of its width using inline CSS. Only the width is set, so the browser works out the height and keeps the proportions. The browser still downloads all 944 KB.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with Editor</h4>
+                <figure>
+                    <img src="images/plate-next-to-head@eprimak-600x800.jpg" alt="Me holding a black round plate next to my head, resized to 600 pixels wide" class="reduced">
+                    <figcaption>The same photo resized in an editor to 600 by 800 pixels (74 KB). It looks sharp and loads quickly. CSS still sets the size so the browser holds the space while the image loads.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <p>Every one of these is the same 600 by 800 file, shown at 40% scale (240 by 320) so all four fit in a row, then stretched by CSS. Watch the plate stop being a circle.</p>
+                <!-- div class="strip squish": div is needed to line these four figures up in one row, no semantic element does that. Each image size is set in default.css by position, not by inline styles -->
+                <div class="strip squish">
+                    <figure>
+                        <img src="images/plate-next-to-head@eprimak-600x800.jpg" alt="Me and the plate squished vertically">
+                        <figcaption>Width kept at 240, height 33% smaller (214). The plate is a wide oval.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/plate-next-to-head@eprimak-600x800.jpg" alt="Me and the plate squished vertically even more">
+                        <figcaption>Width kept at 240, height cut 33% again (143). Flattened.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/plate-next-to-head@eprimak-600x800.jpg" alt="Me and the plate squeezed horizontally">
+                        <figcaption>Height kept at 320, width 33% smaller (161). The plate is a tall oval.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/plate-next-to-head@eprimak-600x800.jpg" alt="Me and the plate squeezed horizontally even more">
+                        <figcaption>Height kept at 320, width cut 33% again (108). Stretched tall and thin.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <p>Both are displayed at the same CSS size, 400 by 533. Only the file behind them differs.</p>
+                <div class="strip enlarge">
+                    <figure>
+                        <img src="images/plate-next-to-head@eprimak-600x800.jpg" alt="Me and the plate at 600 by 800, sharp">
+                        <figcaption>The 600 by 800 file displayed at 400 by 533. Sharp.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/plate-next-to-head@eprimak-150x200.jpg" alt="Me and the plate reduced to 150 by 200 then enlarged, blurry">
+                        <figcaption>The 150 by 200 file (25% of the other) stretched by CSS to the same 400 by 533. The browser has to invent pixels, so it is blurry and blocky.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+<script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

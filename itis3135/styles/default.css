@@ -134,3 +134,193 @@ th, td {
 pre {
     overflow-x: auto;
 }
+
+.pictures figure img {
+    max-width: 100%;     
+    height: auto;
+}
+
+.pictures hr {
+    margin: 40px 0;
+}
+
+.pictures article {
+    margin: 24px 0;
+}
+
+.pictures figure > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.pictures .strip {
+    display: flex;
+    align-items: flex-start;
+    justify-content: safe center;
+    gap: 16px;
+    overflow-x: auto; 
+}
+
+.pictures .strip figure {
+    display: table;  
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.pictures .strip figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    font-size: 0.85em;
+}
+
+.pictures .strip img {
+    max-width: none; 
+}
+
+.pictures .reduced {
+    width: 600px;
+    aspect-ratio: 3 / 2;
+}
+
+.pictures .squish figure:nth-child(1) img { width: 240px; height: 107px; }
+.pictures .squish figure:nth-child(2) img { width: 240px; height: 72px; }
+.pictures .squish figure:nth-child(3) img { width: 161px; height: 160px; }
+.pictures .squish figure:nth-child(4) img { width: 108px; height: 160px; }
+
+.pictures .enlarge img {
+    width: 400px;
+    height: 267px;
+}
+
+#picturePreview {
+    display: block;
+    max-width: 150px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.intro-form fieldset {
+    border: 1px solid #b8c2cf;
+    border-radius: 6px;
+    margin: 0 0 16px 0;
+    padding: 10px 14px 14px;
+}
+
+.intro-form legend {
+    font-weight: bold;
+    color: #1a365d;
+    padding: 0 6px;
+}
+
+.intro-form label {
+    display: block;
+    margin: 10px 0 0;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.intro-form input[type="text"],
+.intro-form input[type="url"],
+.intro-form input[type="file"],
+.intro-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 6px;
+    font: inherit;
+    font-weight: normal;
+    border: 1px solid #b8c2cf;
+    border-radius: 4px;
+    background-color: #ffffff; /* white field/button background so it stands out from the gray page */
+}
+
+.intro-form .course-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed #b8c2cf;
+}
+
+.intro-form .course-row input[type="text"] {
+    margin-top: 0;
+}
+
+.intro-form .course-row input[name="courseTitle"],
+.intro-form .course-row input[name="reasonForTaking"],
+.intro-form .course-row .delete-course {
+    grid-column: 1 / -1;
+}
+
+.intro-form .course-row .delete-course {
+    justify-self: start;
+}
+
+.intro-form .link-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.intro-form .link-row input {
+    margin-top: 0;
+}
+
+.intro-form button {
+    font: inherit;
+    padding: 6px 14px;
+    border: 1px solid #2b6cb0;
+    border-radius: 4px;
+    background-color: #2b6cb0;
+    color: #ffffff; /* white text for contrast on the dark button */
+    cursor: pointer;
+}
+
+.intro-form button:hover,
+.intro-form button:focus {
+    background-color: #1a365d;
+}
+
+.intro-form .delete-course {
+    background-color: #ffffff; /* white field/button background so it stands out from the gray page */
+    color: #9b2c2c;
+    border-color: #9b2c2c;
+}
+
+.intro-form .delete-course:hover,
+.intro-form .delete-course:focus {
+    background-color: #9b2c2c;
+    color: #ffffff; /* white text for contrast on the dark button */
+}
+
+.intro-form .form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#outputs .output textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.85em;
+    padding: 8px;
+    border: 1px solid #b8c2cf;
+    border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+    .intro-form .course-row,
+    .intro-form .link-row {
+        grid-template-columns: 1fr;
+    }
+}
